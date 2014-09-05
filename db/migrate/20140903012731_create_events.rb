@@ -5,7 +5,7 @@ class CreateEvents < ActiveRecord::Migration
       t.string  :location
       t.text  :description
       t.date    :date
-      t.time  :time
+      t.string  :time
       t.integer :user_id
 
       t.timestamps

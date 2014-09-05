@@ -68,7 +68,7 @@ li a {
 
 .nav_link:hover, button:hover {
   background: white;
-  color: black;
+  color: #E80000;
 }
 
 #nav_links {
@@ -101,6 +101,7 @@ li a {
   color:  black;
 }
 #sign_out_button {
+  clear: right;
   float:  right;
   top:    0px;
   right:  0px;
@@ -108,6 +109,7 @@ li a {
   color:  white;
   height: 50px;
   color:  black;
+  position: absolute;
 }
 
 #sign_out_buttons {
@@ -125,4 +127,12 @@ li a {
   display:       block;
   padding:       6px;
   float:         right;
+}
+
+#welcome {
+  color: white;
+  font-family: helvetica;
+  float: right;
+  margin-right: 80px;
+  padding: 15px;
 }

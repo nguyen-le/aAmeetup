@@ -18,13 +18,18 @@
          </li>
        </ul>
      </div>
+
+     <span id="welcome">Welcome <%= current_user.name %>!</span>
     <% if current_user %>
       <form action="<%= session_url %>" method="post" accept-charset="utf-8">
         <%= render 'shared/auth_token' %>
         <input type="hidden" name="_method" id="" value="delete" />
-        <button type="submit" name="" id="sign_out_button" value="Sign Out">Sign Out</button>
+        <button type="submit" 
+          name="" 
+          id="sign_out_button" 
+          value="Sign Out">Sign Out</button>
       </form>
-      <%= button_to "Sign Out", session_url, class: "sign_out_button", method: "delete" %>
+      <%# button_to "Sign Out", session_url, class: "sign_out_button", method: "delete" %>
     <% end %>
   </div>
   <div id="content">

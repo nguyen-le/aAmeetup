@@ -3,6 +3,6 @@
   <%= link_to "Create New Event", new_event_url  %>
 
   <% @events.each do |event| %>
-    <p><%= event.title %></p>
+    <p><%= link_to event.title, event_url(event) %></p>
   <% end %>
 </div>
