@@ -5,6 +5,6 @@
   <% end %>
 
   <% @events.each do |event| %>
-    <p><%= link_to event.title, event_url(event) %></p>
+    <p><%= event.date.to_formatted_s(:long) %> - <%= link_to event.title, event_url(event) %> </p>
   <% end %>
 </div>

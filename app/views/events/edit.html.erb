@@ -1,2 +1,6 @@
-<h1>Events#edit</h1>
-<p>Find me in app/views/events/edit.html.erb</p>
+<h1>Edit</h1>
+
+<%= render 'shared/event_form', 
+  action_url: event_url(@event),
+  patch: true,
+  submit_button: "Edit event"%>
