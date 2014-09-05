@@ -23,7 +23,6 @@ body {
   background-color: #99FFFF;
   backgrounds: url('stage.jpg') no-repeat fixed;
   size: cover;
-  font-family: verdana;
 }
 
 #content {
@@ -84,8 +83,6 @@ label {
   height: 20px;
   text-decoration: none;
   displayz: inline-block;
-  color: white;
-  font-family: verdana;
 }
 
 .nav_link:hover, button:hover {
@@ -154,7 +151,7 @@ label {
 
 #welcome {
   color: white;
-  font-family: verdana;
+  font-family: helvetica;
   float: right;
   margin-right: 80px;
   padding: 15px;
