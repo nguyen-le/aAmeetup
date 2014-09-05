@@ -19,7 +19,9 @@
        </ul>
      </div>
 
-     <span id="welcome">Welcome <%= current_user.name %>!</span>
+     <% if current_user %>
+       <span id="welcome">Welcome <%= current_user.name %>!</span>
+     <% end %>
     <% if current_user %>
       <form action="<%= session_url %>" method="post" accept-charset="utf-8">
         <%= render 'shared/auth_token' %>
