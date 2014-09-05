@@ -5,6 +5,7 @@ This is the first steps towards creating a web app that we and future cohorts wi
 It has limited features right now due to its infancy, but I hope that we'll be able to find it useful! :)
 
 Features to add:
+- Message Board
 - Classifieds
 - Jobs
 - Housing
