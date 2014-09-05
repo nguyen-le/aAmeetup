@@ -3,3 +3,6 @@
 
 <p>Location: <%= @event.location %></p>
 <p>Description: <%= @event.description %></p>
+
+<%= button_to "RSVP!", event_rsvps_url(@event), method: :post %>
+<%= link_to "See all RSVPs for this event", event_rsvps_url(@event) %>

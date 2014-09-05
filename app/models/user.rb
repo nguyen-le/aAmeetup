@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
 
   has_many :chats
   has_many :events
+  has_many :rsvps
 
   def self.generate_token
     SecureRandom.urlsafe_base64

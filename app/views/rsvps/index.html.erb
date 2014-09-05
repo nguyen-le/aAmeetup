@@ -1,0 +1,6 @@
+<h1>All RSVPS</h1>
+<ul>
+  <% @event.rsvps.each do |rsvp| %>
+    <li><%= link_to rsvp.user.name, user_url(rsvp.user) %></li>
+  <% end %>
+</ul>

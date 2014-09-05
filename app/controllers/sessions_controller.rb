@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  before_action :no_login_twice, only: [:new]
+
   def new
     @user = User.new
   end
@@ -25,6 +27,12 @@ class SessionsController < ApplicationController
 
   def user_params
     params.require(:user).permit(:name, :password)
+  end
+
+  def no_login_twice
+    if logged_in?
+      redirect_to events_url
+    end
   end
 
 end
