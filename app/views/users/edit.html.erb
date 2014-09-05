@@ -1,2 +1,10 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<h1><%= @user.name %></h1>
+
+<form action="<%= edit_user_url(@user) %>" method="post">
+  <%= render 'shared/auth_token' %>
+  <%= render 'shared/patch' %>
+  <label for="">GitHub: </label>
+  <input type="text" name="" id="" value="" />
+
+  <button type="submit">Submit</button>
+</form>

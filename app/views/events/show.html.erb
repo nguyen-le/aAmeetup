@@ -1,4 +1,5 @@
 <h1><%= @event.title %></h1>
+Host: <%= link_to @event.user.name, user_url(@event.user) %>
 <h4><%= @event.date.to_formatted_s(:long) %><br /> <%= @event.time %></h4>
 <% if @event.user == current_user %>
   <%= link_to "Edit", edit_event_url(@event)  %>
