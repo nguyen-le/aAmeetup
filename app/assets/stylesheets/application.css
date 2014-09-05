@@ -75,9 +75,6 @@ label {
   display: block;
 }
 
-#nav_links li a {
-  color: white;
-}
 .nav_link {
   padding: 5px;
   border-style: solid;
@@ -85,6 +82,7 @@ label {
   height: 20px;
   text-decoration: none;
   displayz: inline-block;
+  color: white;
 }
 
 .nav_link:hover, button:hover {
