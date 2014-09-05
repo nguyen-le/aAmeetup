@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   after_initialize :ensure_session_token
 
   has_many :chats
+  has_many :events
 
   def self.generate_token
     SecureRandom.urlsafe_base64

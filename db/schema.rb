@@ -27,9 +27,10 @@ ActiveRecord::Schema.define(version: 20140903012731) do
   create_table "events", force: true do |t|
     t.string   "title"
     t.string   "location"
+    t.text     "description"
     t.date     "date"
-    t.string   "time"
-    t.integer  "owner_id"
+    t.time     "time"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

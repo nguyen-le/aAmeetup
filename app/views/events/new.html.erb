@@ -1,5 +1,6 @@
 <h1>Add New Event</h1>
 <form action="<%= events_url %>" method="post" accept-charset="utf-8">
+  <%= render 'shared/auth_token' %>
   <label for="">Title</label>
   <input type="text" name="event[title]" id="" value="" />
 
@@ -7,11 +8,13 @@
   <input type="text" name="event[location]" id="" value="" />
 
   <label for="">Description</label>
-  <textarea name="event[description]" id= rows="8" cols="40"></textarea>
+  <textarea name="event[description]" id="" rows="13" cols="40"></textarea>
 
   <label for="">Date</label>
   <input type="date" name="event[date]" id="" value="" />
 
   <label for="">Time</label>
   <input type="time" name="event[time]" id="" value="" />
+
+  <button type="submit">Create Event</button>
 </form>
