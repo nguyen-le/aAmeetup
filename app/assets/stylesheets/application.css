@@ -40,6 +40,27 @@ body {
   padding-top: 10px;
 }
 
+#board {
+  display: block;
+  height: 400px;
+}
+#hangout {
+  float: left;
+  margin-left: 20px;
+}
+
+#hangout h3 {
+  margin-left: 80px;
+}
+
+#study {
+  float: right;
+  margin-right: 20px;
+}
+
+#study h3 {
+  margin-right: 80px;
+}
 #header {
   position: fixed;
   width:    100%;
@@ -54,7 +75,7 @@ label {
   display: block;
 }
 
-li a {
+#nav_links li a {
   color: white;
 }
 .nav_link {
@@ -87,6 +108,7 @@ li a {
   top:     10px;
   color:   white;
 }
+
 #registration.label {
   float: right;
 }
