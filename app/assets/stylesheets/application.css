@@ -22,6 +22,7 @@ body {
   background-color: #99FFFF;
   backgrounds: url('stage.jpg') no-repeat fixed;
   size: cover;
+  font-family: verdana;
 }
 
 #content {
