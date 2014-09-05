@@ -1,6 +1,8 @@
 <h1>Events</h1>
 <div id="event_board">
-  <%= link_to "Create New Event", new_event_url  %>
+  <% if logged_in?  %>
+    <%= link_to "Create New Event", new_event_url  %>
+  <% end %>
 
   <% @events.each do |event| %>
     <p><%= link_to event.title, event_url(event) %></p>

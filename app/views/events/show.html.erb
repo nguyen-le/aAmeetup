@@ -1,5 +1,5 @@
 <h1><%= @event.title %></h1>
-<h4><%= @event.date %> <%= @event.time %></h4>
+<h4><%= @event.date.to_formatted_s(:long) %><br /> <%= @event.time %></h4>
 
 <p>Location: <%= @event.location %></p>
 <p>Description: <%= @event.description %></p>

@@ -2,13 +2,13 @@
 <form action="<%= events_url %>" method="post" accept-charset="utf-8">
   <%= render 'shared/auth_token' %>
   <label for="">Title</label>
-  <input type="text" name="event[title]" id="" value="" />
+  <input type="text" name="event[title]" id="" value="<%= @event.title %>" />
 
   <label for="">Location</label>
-  <input type="text" name="event[location]" id="" value="" />
+  <input type="text" name="event[location]" id="" value="<%= @event.location %>" />
 
   <label for="">Description</label>
-  <textarea name="event[description]" id="" rows="13" cols="40"></textarea>
+  <textarea name="event[description]" id="" rows="13" cols="40"><%= @event.description %></textarea>
 
   <label for="">Date</label>
   <input type="date" name="event[date]" id="" value="" />

@@ -16,6 +16,13 @@
          <li>
          <%= link_to "Events", events_url, class: "nav_link"  %>
          </li>
+         <li>
+         <% unless logged_in? %>
+           <%= link_to "Login", new_session_url , class: "nav_link"%>
+         <% else %>
+           <%= link_to "Profile", user_url(current_user.id), class: "nav_link" %>
+         <% end %>
+         </li>
        </ul>
      </div>
 
@@ -42,14 +49,10 @@
 
     <br />
     <% if logged_in? %>
-      <%= link_to "View my profile", user_url(current_user.id) %>
     <% end %>
 
     <br />
 
-    <% unless current_user %>
-      <%= link_to "Login", new_session_url %>
-    <% end %>
   </div>
 </body>
 </html>
