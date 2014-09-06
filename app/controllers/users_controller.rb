@@ -52,7 +52,8 @@ class UsersController < ApplicationController
 
   def home
     @features = Feature.all
-    @events   = Event.all
+    @recent_events   = Event.where("events.date < ?", Time.now)
+    @upcoming_events = Event.where("events.date > ?", Time.now)
   end
 
   private
