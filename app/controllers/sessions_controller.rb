@@ -10,9 +10,9 @@ class SessionsController < ApplicationController
 
     if @user
       login!(@user)
-      redirect_to events_url
+      redirect_to '/home'
     else
-      flash[:notices] = ["Invalid name/password combination"]
+      flash.now[:notices] = ["Invalid name/password combination"]
       @user = User.new(name: user_params[:name])
       render :new
     end
