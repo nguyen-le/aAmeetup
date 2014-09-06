@@ -13,12 +13,12 @@
 <h2>Events</h2>
 <h3>Upcoming Events</h3>
   <% @upcoming_events.each do |event| %>
-    <p><%= event.date.to_formatted_s(:long) %> - <%= link_to event.title, event_url(event) %> </p>
+    <%= event.date.to_formatted_s(:long) %> - <%= link_to event.title, event_url(event) %> <br />
   <% end %>
 
 <h3>Recent Events</h3>
   <% @recent_events.each do |event| %>
-    <p><%= event.date.to_formatted_s(:long) %> - <%= link_to event.title, event_url(event) %> </p>
+    <%= event.date.to_formatted_s(:long) %> - <%= link_to event.title, event_url(event) %> <br />
   <% end %>
 
 <h2>Recent Messages</h2>
