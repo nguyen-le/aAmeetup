@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :can_create?, only: [:new, :show]
+  before_action :must_be_logged_in, except: :index
   def new
     @event = Event.new
   end
@@ -51,10 +51,4 @@ class EventsController < ApplicationController
     params.require(:event).permit(:title, :location, :date, :time, :description)
   end
 
-  def can_create?
-    unless logged_in?
-      flash[:notices] = ["Must be logged in first!"]
-      redirect_to new_session_url
-    end
-  end
 end

@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :must_be_logged_in, except: [:new, :create]
   def new
     @user = User.new
   end
@@ -49,6 +50,11 @@ class UsersController < ApplicationController
     redirect_to new_user_url
   end
 
+  def home
+    @features = Feature.all
+    @events   = Event.all
+  end
+
   private
 
   def user_params
@@ -59,4 +65,5 @@ class UsersController < ApplicationController
     string = params[:verify].downcase
     string.include?("rails") && string.include?("backbone")
   end
+
 end

@@ -11,17 +11,20 @@
      <div id="nav_top">
        <ul id="nav_links">
          <li>
+           <%= link_to "Home", '/home', class: "nav_link" %>
+         </li>
+         <li>
+           <%= link_to "Events", events_url, class: "nav_link"  %>
+         </li>
+         <li>
            <%= link_to "MessageBoard", chats_url, class: "nav_link"  %>
          </li>
          <li>
-         <%= link_to "Events", events_url, class: "nav_link"  %>
-         </li>
-         <li>
-         <% unless logged_in? %>
-           <%= link_to "Login", new_session_url , class: "nav_link"%>
-         <% else %>
-           <%= link_to "Profile", user_url(current_user.id), class: "nav_link" %>
-         <% end %>
+           <% unless logged_in? %>
+             <%= link_to "Login", new_session_url , class: "nav_link"%>
+           <% else %>
+             <%= link_to "Profile", user_url(current_user.id), class: "nav_link" %>
+           <% end %>
          </li>
        </ul>
      </div>
@@ -29,15 +32,15 @@
      <% if current_user %>
        <span id="welcome">Welcome <%= current_user.name %>!</span>
      <% end %>
-    <% if current_user %>
-      <form action="<%= session_url %>" method="post" accept-charset="utf-8">
-        <%= render 'shared/auth_token' %>
-        <input type="hidden" name="_method" id="" value="delete" />
-        <button type="submit" 
-          name="" 
-          id="sign_out_button" 
-          value="Sign Out">Sign Out</button>
-      </form>
+     <% if current_user %>
+       <form action="<%= session_url %>" method="post" accept-charset="utf-8">
+       <%= render 'shared/auth_token' %>
+       <input type="hidden" name="_method" id="" value="delete" />
+       <button type="submit" 
+         name="" 
+         id="sign_out_button" 
+         value="Sign Out">Sign Out</button>
+       </form>
       <%# button_to "Sign Out", session_url, class: "sign_out_button", method: "delete" %>
     <% end %>
   </div>
@@ -45,11 +48,8 @@
     <div id="flash">
       <%= render 'shared/flash_notice' %>
     </div>
-    <%= yield %>
 
-    <br />
-    <% if logged_in? %>
-    <% end %>
+    <%= yield %>
 
     <br />
 

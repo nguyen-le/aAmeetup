@@ -1,0 +1,15 @@
+<form action="<%= action_url %>" method="post">
+  <%= render 'shared/auth_token' %>
+  <% if patch %>
+    <%= render 'shared/patch' %>
+  <% end %>
+
+  <label for="">Name</label>
+  <input type="text" name="feature[name]" id="" value="<%= @feature.name %>" />
+
+  <label for="">Description</label>
+  <textarea name="feature[description]" id="" rows="12" cols="40"></textarea>
+
+  <br />
+  <button type="submit"><%= submit_button %></button>
+</form>

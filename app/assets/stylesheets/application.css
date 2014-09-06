@@ -76,7 +76,7 @@ label {
   display: block;
 }
 
-.nav_link {
+.nav_link, #sign_out_button {
   padding: 5px;
   border-style: solid;
   border-color: white;
@@ -86,7 +86,7 @@ label {
   color: white;
 }
 
-.nav_link:hover, button:hover {
+.nav_link:hover, button:hover, #sign_out_button:hover {
   background: white;
   color: #E80000;
 }
@@ -124,13 +124,15 @@ label {
 #sign_out_button {
   clear: right;
   float:  right;
-  top:    0px;
-  right:  0px;
+  top:    5px;
+  right:  5px;
   margin: 0px;
   color:  white;
-  height: 50px;
-  color:  black;
+  height: 35px;
+  font-size: medium;
   position: absolute;
+  border-width: 3px;
+  background-color: #E80000;
 }
 
 #sign_out_buttons {
