@@ -15,6 +15,9 @@ class FeaturesController < ApplicationController
     end
   end
 
+  def show
+    @feature = Feature.find(params[:id])
+  end
   private
 
   def feature_params
