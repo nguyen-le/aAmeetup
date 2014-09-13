@@ -1,5 +1,5 @@
 <h2><%= @feature.name %></h2>
 
-Support this feature by voting!<%= button_to "Vote", '/home' %>
+Support this feature by voting!<%= button_to "Vote", feature_votes_url(@feature) %>
 
 <p><%= @feature.description %></p>
