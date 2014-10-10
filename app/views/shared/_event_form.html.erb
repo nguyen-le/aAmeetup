@@ -3,20 +3,20 @@
   <% if patch  %>
     <%= render 'shared/patch' %>
   <% end %>
-  <label for="">Title</label>
-  <input type="text" name="event[title]" id="" value="<%= @event.title %>" />
+  <label for="event-title">Title</label>
+  <input type="text" name="event[title]" id="event-title" value="<%= @event.title %>" />
 
-  <label for="">Location</label>
-  <input type="text" name="event[location]" id="" value="<%= @event.location %>" />
+  <label for="event-location">Location</label>
+  <input type="text" name="event[location]" id="event-location" value="<%= @event.location %>" />
 
-  <label for="">Description</label>
-  <textarea name="event[description]" id="" rows="13" cols="40"><%= @event.description %></textarea>
+  <label for="event-description">Description</label>
+  <textarea name="event[description]" id="event-description" rows="13" cols="40"><%= @event.description %></textarea>
 
-  <label for="">Date</label>
-  <input type="date" name="event[date]" id="" value="<%= @event.date %>" />
+  <label for="event-date">Date</label>
+  <input type="date" name="event[date]" id="event-date" value="<%= @event.date %>" />
 
-  <label for="">Time</label>
-  <input type="text" name="event[time]" id="" value="<%= @event.time %>" />
+  <label for="event-time">Time</label>
+  <input type="text" name="event[time]" id="event-time" value="<%= @event.time %>" />
 
   <button type="submit"><%= submit_button %></button>
 </form>

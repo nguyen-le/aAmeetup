@@ -4,12 +4,13 @@
     <%= render 'shared/patch' %>
   <% end %>
 
-  <label for="">Name</label>
-  <input type="text" name="feature[name]" id="" value="<%= @feature.name %>" />
+  <label for="feature-name">Name</label>
+  <input type="text" name="feature[name]" id="feature-name" value="<%= @feature.name %>" />
 
-  <label for="">Description</label>
-  <textarea name="feature[description]" id="" rows="12" cols="40"></textarea>
+  <label for="feature-description">Description</label>
+  <textarea name="feature[description]" id="feature-description" rows="12" cols="40"></textarea>
 
-  <br />
-  <button type="submit"><%= submit_button %></button>
+  <div>
+    <button type="submit"><%= submit_button %></button>
+  </div>
 </form>

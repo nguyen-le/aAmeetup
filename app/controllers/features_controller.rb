@@ -11,13 +11,14 @@ class FeaturesController < ApplicationController
       flash[:notice] = 'Feature was successfully created.'
       redirect_to '/home'
     else
-      render action: 'new'
+      render :new
     end
   end
 
   def show
     @feature = Feature.find(params[:id])
   end
+
   private
 
   def feature_params

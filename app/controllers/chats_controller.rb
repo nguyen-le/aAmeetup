@@ -10,7 +10,8 @@ class ChatsController < ApplicationController
     if @chat.save
       redirect_to event_url(@chat.event)
     else
-      render json: @chat.errors.full_messages, status: :unprocessable_entity
+      flash.now[:notices] = @chat.errors.full_messages
+      render :new
     end
   end
 

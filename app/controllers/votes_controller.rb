@@ -10,9 +10,4 @@ class VotesController < ApplicationController
       redirect_to "/home"
     end
   end
-
-  private
-
-  def vote_params
-  end
 end

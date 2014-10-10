@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
 
-    if verification
+    if verification_passed?
       if @user.save
         login!(@user)
         redirect_to events_url
@@ -16,7 +16,7 @@ class UsersController < ApplicationController
         render :new
       end
     else
-      flash.now[:notices] = ["Wrong framework"]
+      flash.now[:notices] = ["Verification failed!"]
       render :new
     end
   end
@@ -62,7 +62,7 @@ class UsersController < ApplicationController
     params.require(:user).permit(:name, :password)
   end
 
-  def verification
+  def verification_passed?
     string = params[:verify].downcase
     string.include?("rails") && string.include?("backbone")
   end
